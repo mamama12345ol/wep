@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  @apply antialiased;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-amber-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-red-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-800;
+}
+
+/* Arabic-inspired decorative elements */
+.arabic-border {
+  border-image: repeating-linear-gradient(
+    45deg,
+    #B91C1C,
+    #B91C1C 10px,
+    #FCD34D 10px,
+    #FCD34D 20px
+  ) 10;
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, #fef3c7 4%, #fde68a 25%, #fef3c7 36%);
+  background-size: 1000px 100%;
+}
